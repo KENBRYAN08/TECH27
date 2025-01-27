@@ -1,0 +1,312 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+  }
+  
+  .navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  .navigation.active {
+    width: 80px;
+  }
+  
+  .navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .navigation ul li:hover,
+  .navigation ul li.hovered {
+    background-color: var(--white);
+  }
+  
+  .navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+  }
+  
+  .navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+  }
+  .navigation ul li:hover a,
+  .navigation ul li.hovered a {
+    color: var(--blue);
+  }
+  
+  .navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+  }
+  .navigation ul li a .icon ion-icon {
+    font-size: 1.75rem;
+  }
+  
+  .navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+  }
+  
+  /* --------- curve outside ---------- */
+  .navigation ul li:hover a::before,
+  .navigation ul li.hovered a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+  }
+  .navigation ul li:hover a::after,
+  .navigation ul li.hovered a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+  }
+
+  /* General styling for the top navigation */
+/* General styling for the top navigation */
+.topnav {
+  display: flex;
+  justify-content: space-between;  /* Centers content horizontally */
+  align-items: center;
+  padding: 5px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; 
+  color: white;
+  z-index: 10;
+  height: 100px; /* Adjust for proper alignment */
+  transition: top 0.3s; /* Smooth transition */
+}
+
+/* Positioning the logo on the left */
+.topnav .logo {
+  position: absolute;
+  left: 20px;
+}
+
+.topnav .logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Right side of the nav */
+.topnav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Search form styling */
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  width: 400px; /* Adjust width as necessary */
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  justify-content: center;
+  padding-left: 10px;
+  margin: 20px 10px; /* Add margin on top to move it down */
+  left: 120px; /* Move the search form 100px to the right */
+}
+
+.search-form:hover {
+  border-color: #2a2185;
+}
+
+.search-form button {
+  background-color: #f9f9f9; /* White background for the button */
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 25px; /* Rounded corners on all sides */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-20%); /* Align with the middle of the input */
+}
+
+.search-form button ion-icon {
+  color: #2a2185; /* Icon matches primary theme color */
+  font-size: 1.2rem;
+}
+
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  width: 400px; /* Adjust width as necessary */
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  justify-content: center;
+  padding-left: 10px;
+  transform: translateX(500px);
+  margin: 20px 10px; /* Add margin on top to move it down */
+}
+
+.search-form:hover {
+  border-color: #2a2185;
+}
+
+.search-form input {
+  height: 20px; /* Height of the input */
+  padding: 5px 20px;
+  font-size: 16px;
+  position: relative;
+  border: none;
+  outline: none;
+  flex-grow: 1; /* Fills remaining space */
+  background-color: transparent;
+  color: #333;
+  margin-top: 10px; /* Add margin-top to push the input lower */
+}
+
+
+.search-form input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f9f9f9; /* Background for better visibility */
+  cursor: pointer;
+  color: #2a2185;
+}
+
+.user ion-icon {
+  font-size: 3.5rem;
+}
+
+
+  @media (max-width: 991px) {
+    .navigation {
+      left: -300px;
+    }
+    .navigation.active {
+      width: 300px;
+      left: 0;
+    }
+    .main {
+      width: 100%;
+      left: 0;
+    }
+    .main.active {
+      left: 300px;
+    }
+    .cardBox {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .details {
+      grid-template-columns: 1fr;
+    }
+    .recentOrders {
+      overflow-x: auto;
+    }
+    .status.inProgress {
+      white-space: nowrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardBox {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .cardHeader h2 {
+      font-size: 20px;
+    }
+    .user {
+      min-width: 40px;
+    }
+    .navigation {
+      width: 100%;
+      left: -100%;
+      z-index: 1000;
+    }
+    .navigation.active {
+      width: 100%;
+      left: 0;
+    }
+    .toggle {
+      z-index: 10001;
+    }
+    .main.active .toggle {
+      color: #fff;
+      position: fixed;
+      right: 0;
+      left: initial;
+    }
+  }
+  
