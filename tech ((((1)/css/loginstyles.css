@@ -1,0 +1,112 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 10;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.main-content {
+    margin-left: 300px; /* Offset by sidenav width */
+    padding: 20px; /* Add padding around the main content */
+    width: calc(100% - 350px); /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: margin-left 0.5s, width 0.5s;
+}
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: width 0.5s, left 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the form on the page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+form {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* Style the heading */
+h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+}
+
+/* Style the input fields */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Style the login button */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #2a2185;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style error messages */
+.error {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Add some spacing around the form */
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
