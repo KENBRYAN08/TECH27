@@ -1,0 +1,242 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 10;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+    text-transform: capitalize;
+}
+
+.main-content {
+    margin-left: 300px; /* Offset by sidenav width */
+    padding: 20px; /* Add padding around the main content */
+    width: calc(100% - 350px); /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in the width */
+    transition: margin-left 0.5s, width 0.5s;
+}
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: width 0.5s, left 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+/* Form Styles */
+form {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Make form in two columns */
+    gap: 5px;
+}
+
+h1, h2 {
+    color: var(--blue);
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input and Select Styles */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+
+/* Center the Add User Button */
+button {
+    background-color: var(--blue);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    grid-column: span 2; /* Makes the button span both columns */
+    margin-top: 20px; /* Adds space above the button */
+}
+
+button:hover {
+    background-color: #4b3a99;
+}
+
+
+
+
+
+table {
+    margin-left: 300px; /* Offset by sidenav width */
+    padding: 20px; /* Add padding around the table */
+    width: calc(100% - 350px); /* Prevent overflow (offset by sidebar width) */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    margin-top: 20px; /* Space above the table */
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    text-align: center;
+    position: relative; /* Ensure the table stays in front of the sidebar */
+    z-index: 2; /* Bring table in front of the sidebar */
+}
+
+th, td {
+  padding: 1px;
+    font-size: 0.9em; /* Smaller font size */
+}
+
+th {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Button Styles for Edit and Delete Buttons */
+button.edit, button.delete {
+    padding: 3px 6px; /* Smaller button size */
+    font-size: 0.8em; /* Smaller font size */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+/* Centered Boxes */
+.center-box {
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.center-box:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.center-box h3 {
+    color: var(--blue);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.center-box p {
+    font-size: 1em;
+    color: #555;
+}
+
+.center-box img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Center Grid Styling */
+.center-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+
+/* --------------modal-------------------- */
+
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color:#24d600;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding-top: 60px;
+    margin: 10% auto;
+    border-radius: 20px;
+    width: 350px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Close button */
+.close{
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Success message */
+.success-message {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}

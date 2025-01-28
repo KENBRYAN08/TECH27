@@ -1,0 +1,228 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 10;
+}
+
+
+.main-content {
+    margin-left: 250px; /* Ensure content doesn't overlap the sidenav */
+    padding: 20px; /* Add padding around the main content */
+    width: calc(100% - 250px); /* Adjust width to avoid overflow */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    color: #2a2185;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input and Select Styles */
+input[type="text"],
+select,
+input[type="file"] {
+    width: auto;
+    min-width: 95%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+/* File Input Styling */
+input[type="file"] {
+    padding: 4px;
+}
+
+/* Button Styling */
+button {
+    background-color: #2a2185;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4b3a99;
+}
+
+/* Image Styling */
+img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    display: block;
+    margin: 0 auto 16px;
+}
+
+/* Status Boxes */
+.status-boxes {
+    display: flex;
+    gap: 20px;
+}
+
+/* ======================= Status Styles ====================== */
+.status.active {
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.pending {
+    padding: 2px 4px;
+    background: #e9b10a;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.inactive {
+    padding: 2px 4px;
+    background: #f00;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.relaunch {
+    padding: 2px 4px;
+    background: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ======================= Status Bar ====================== */
+.cardBox {
+    position: relative;
+    width: 95%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+  
+.cardBox .card {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.cardBox .card .cardName {
+    color: var(--black2);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+    font-size: 3.5rem;
+    color: var(--black2);
+}
+
+.cardBox .card:hover {
+    background: var(--blue);
+}
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+    color: var(--white);
+}
+
+
+
+
+/* Center Boxes */
+.center-box {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.center-box:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* =============== Center Grid Styling =============== */
+.center-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: right; /* Align items to the right */
+}
+
+.center-box {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.center-box img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.center-box h2 {
+    font-size: 1.2rem;
+    color: #2a2185;
+    margin-bottom: 10px;
+}
+
+.center-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Optional: Add hover effect */
+.center-box:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
