@@ -1,0 +1,23 @@
+/* Side Navigation */
+.sidenav {
+    width: 250px;
+    height: 100%;
+    background-color: #2a2185;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidenav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.sidenav a:hover {
+    background-color: #4b3a99;
+}
